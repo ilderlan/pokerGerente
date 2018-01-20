@@ -1,0 +1,46 @@
+	<ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Incluir jogador</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancelar</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+        
+        <button ng-click="excluirJogador(jogador.id_jogador)" class="button button-assertive">Excluir</button>
+        
+          <input type="hidden" ng-model="jogador.id_jogador" />
+          <div class="list">
+
+            <label class="item item-input">
+              <span class="input-label">Nome</span>
+              <input ng-model="jogador.primeiro_nome" type="text">
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Sobre Nome</span>
+              <input ng-model="jogador.sobre_nome" type="text" step="any"  >
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Idade</span>
+              <input ng-model="jogador.idade" type="number" step="any"   >
+            </label>
+
+              <label class="item item-input">
+                  <span class="input-label">CPF</span>
+                  <input ng-model="jogador.cpf" type="text" step="any"   >
+              </label>
+
+              <label class="item item-input">
+                  <span class="input-label">Sexo</span>
+                  <label class="radio-icon">
+                      <input type="radio" ng-model="jogador.sexo" value="M"> Masculino
+                  </label>
+                  <label class="radio-waves">
+                      <input type="radio" ng-model="jogador.sexo" value="F">Feminino
+                  </label>
+              </label>
+
+            <button class="button button-full button-positive" ng-click="adicionarJogador(jogador)">Salvar</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>

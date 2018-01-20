@@ -1,0 +1,50 @@
+	<ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Incluir torneio</h1>
+          <button class="button button-clear button-primary" ng-click="fecharModal()">Cancelar</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+        
+        <button ng-click="excluirTorneio(torneio.id_torneio)" class="button button-assertive">Excluir</button>
+        
+          <input type="hidden" ng-model="torneio.id_torneio" />
+          <div class="list">
+
+            <label class="item item-input">
+              <span class="input-label">Nome</span>
+              <input ng-model="torneio.nome" type="text">
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Valor do premio</span>
+              <input ng-model="torneio.vl_premio" type="number" step="any"  >
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Quantidade de premiados</span>
+              <input ng-model="torneio.num_premiados" type="number" step="any"   >
+            </label>
+
+              <label class="item item-input">
+                  <span class="input-label">Valor da inscição</span>
+                  <input ng-model="torneio.vl_inscricao" type="number" step="any"   >
+              </label>
+
+              <label class="item item-input">
+                  <span class="input-label">Tempo da aposta a cegas</span>
+                  <input ng-model="torneio.tp_aposta_cega" type="number" step="any"   >
+              </label>
+
+              <label class="item item-input">
+                  <span class="input-label">Número máximo de participantes</span>
+                  <input ng-model="torneio.num_maximo_participantes" type="number" step="any"   >
+              </label>
+
+              <label class="item item-input">
+                  <span class="input-label">CEP</span>
+                  <input ng-model="torneio.tb_endereco_cep" type="text" step="any">
+              </label>
+            <button class="button button-full button-positive" ng-click="adicionarTorneio(torneio)">Salvar</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>

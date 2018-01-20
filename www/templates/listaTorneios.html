@@ -1,0 +1,28 @@
+<ion-view view-title="Lista de torneios">
+    <ion-content class="padding">
+
+        <button class="button button-icon ion-compose" ng-click="modal.show()">
+        </button>
+
+        <div class="row">
+            <div class="col">Nome</div>
+            <div class="col">Valor do premio</div>
+            <div class="col">Quantidade de premiados</div>
+            <div class="col">Valor da inscição</div>
+            <div class="col">Tempo da aposta a cegas</div>
+            <div class="col">Número máximo de participantes</div>
+        </div>
+        <div class="row" ng-repeat="torneio in torneios track by $index">
+
+            <input type="hidden" ng-model="torneio.id_torneio" />
+
+            <div class="col" ng-click="alterarTorneio(torneio)">{{torneio.nome}}</div>
+            <div class="col">{{torneio.vl_premio}}</div>
+            <div class="col">{{torneio.num_premiados}}</div>
+            <div class="col">{{torneio.vl_inscricao}}</div>
+            <div class="col">{{torneio.tp_aposta_cega}}</div>
+            <div class="col">{{torneio.num_maximo_participantes}}</div>
+        </div>
+
+    </ion-content>
+</ion-view>

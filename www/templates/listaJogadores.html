@@ -1,0 +1,26 @@
+<ion-view view-title="Lista de jogadores">
+    <ion-content class="padding">
+
+        <button class="button button-icon ion-compose" ng-click="modal.show()">
+        </button>
+
+        <div class="row">
+            <div class="col">Nome</div>
+            <div class="col">Sobre Nome</div>
+            <div class="col">Idade</div>
+            <div class="col">CPF</div>
+            <div class="col">Sexo</div>
+        </div>
+        <div class="row" ng-repeat="jogador in jogadores track by $index">
+
+            <input type="hidden" ng-model="jogador.id_jogador" />
+
+            <div class="col" ng-click="alterarJogador(jogador)">{{jogador.primeiro_nome}}</div>
+            <div class="col">{{jogador.sobre_nome}}</div>
+            <div class="col">{{jogador.idade}}</div>
+            <div class="col">{{jogador.cpf}}</div>
+            <div class="col">{{jogador.sexo}}</div>
+        </div>
+
+    </ion-content>
+</ion-view>
